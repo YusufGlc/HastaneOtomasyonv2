@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminEkleSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEkleSil.Designer.cs">
+      <DependentUpon>AdminEkleSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
       <DependentUpon>ReceteSilForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sqlİslemler.cs" />
+    <EmbeddedResource Include="AdminEkleSil.resx">
+      <DependentUpon>AdminEkleSil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>

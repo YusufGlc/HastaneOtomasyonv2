@@ -118,5 +118,102 @@ namespace HastaneOtomasyon
             base.WndProc(ref m);
         }
 
+        private void tcno_MouseEnter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tcno_Enter(object sender, EventArgs e)
+        {
+            if (tcno.Text == "Tc No") 
+            {
+                tcno.Text = "";
+                tcno.ForeColor = Color.Black;
+            }
+        }
+
+        private void tcno_Leave(object sender, EventArgs e)
+        {
+            if (tcno.Text == "")
+            {
+                tcno.Text = "Tc No";
+                tcno.ForeColor = Color.Silver;
+            }
+        }
+
+        private void ad_Enter(object sender, EventArgs e)
+        {
+
+            if (ad.Text == "Ad")
+            {
+                ad.Text = "";
+                ad.ForeColor = Color.Black;
+            }
+        }
+
+        private void ad_Leave(object sender, EventArgs e)
+        {
+
+            if (ad.Text == "")
+            {
+                ad.Text = "Ad";
+                ad.ForeColor = Color.Silver;
+            }
+        }
+
+        private void soyad_Enter(object sender, EventArgs e)
+        {
+
+            if (soyad.Text == "Soyad")
+            {
+                soyad.Text = "";
+                soyad.ForeColor = Color.Black;
+            }
+        }
+
+        private void soyad_Leave(object sender, EventArgs e)
+        {
+            if (soyad.Text == "")
+            {
+                soyad.Text = "Soyad";
+                soyad.ForeColor = Color.Silver;
+            }
+        }
+
+        private void sifre_Enter(object sender, EventArgs e)
+        {
+            if (sifre.Text == "****")
+            {
+                sifre.Text = "";
+                sifre.ForeColor = Color.Black;
+            }
+        }
+
+        private void sifre_Leave(object sender, EventArgs e)
+        {
+            if (sifre.Text == "")
+            {
+                sifre.Text = "****";
+                sifre.ForeColor = Color.Silver;
+            }
+        }
+
+        private void sifreTekrar_Enter(object sender, EventArgs e)
+        {
+            if (sifreTekrar.Text == "****")
+            {
+                sifreTekrar.Text = "";
+                sifreTekrar.ForeColor = Color.Black;
+            }
+        }
+
+        private void sifreTekrar_Leave(object sender, EventArgs e)
+        {
+            if (sifreTekrar.Text == "")
+            {
+                sifreTekrar.Text = "****";
+                sifreTekrar.ForeColor = Color.Silver;
+            }
+        }
     }
 }

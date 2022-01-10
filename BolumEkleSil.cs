@@ -42,7 +42,13 @@ namespace HastaneOtomasyon
             if (MessageBox.Show("Bölümü silmek istediğinize eminmisiniz","UYARI",MessageBoxButtons.YesNo)==DialogResult.Yes)
             {
                 int secilenBolum = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                sqlİslemler.degisiklikYap($"update Doktor set bolum_id=NULL where bolum_id={secilenBolum} ");
+
+                if (sqlİslemler.goruntule($"select count(id) from Doktor where bolum_id={secilenBolum}") != "0") 
+                {
+                    MessageBox.Show("Bölümde doktor var silinemez");
+                    return;
+                }
+
                 sqlİslemler.degisiklikYap($"delete Bolum where bolum_id={secilenBolum} ");
                 bolumListele();
             }

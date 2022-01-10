@@ -235,6 +235,7 @@ namespace HastaneOtomasyon
             this.Name = "HastaSilForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hasta Sil";
+            this.Load += new System.EventHandler(this.HastaSilForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);

@@ -84,5 +84,9 @@ namespace HastaneOtomasyon
             base.WndProc(ref m);
         }
 
+        private void RandevuSilForm_Load(object sender, EventArgs e)
+        {
+            randevuListele();
+        }
     }
 }

@@ -32,17 +32,7 @@ namespace HastaneOtomasyon
         {
             sqlİslemler.goruntule("select bolum_ad from Bolum", cbx_bolum);
 
-            if (sqlİslemler.goruntule("select count(id) from Doktor where bolum_id is Null")!="0")
-            {
-                MessageBox.Show("Bölümü olmayan doktor var");
-
-                sqlİslemler.goruntule("select id,ad,soyad,bolum_ad,kullaniciad,sifre from Doktor as d left join Bolum as b on d.bolum_id=b.bolum_id where d.bolum_id is Null", dataGridView1);
-
-                return;
-            }
-
-            doktorListele();
-            
+            doktorListele(); 
 
         }
 

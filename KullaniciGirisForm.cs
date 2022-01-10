@@ -59,7 +59,6 @@ namespace HastaneOtomasyon
             this.Hide();
             doktorForm.Show();
             doktorTextBox1.Clear();
-            //
             doktorTextBox2.Clear();
         }
 

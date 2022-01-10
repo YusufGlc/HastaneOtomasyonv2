@@ -48,11 +48,16 @@ namespace HastaneOtomasyon
             // tcno
             // 
             this.tcno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tcno.ForeColor = System.Drawing.Color.Silver;
             this.tcno.Location = new System.Drawing.Point(124, 44);
             this.tcno.MaxLength = 11;
             this.tcno.Name = "tcno";
             this.tcno.Size = new System.Drawing.Size(156, 23);
             this.tcno.TabIndex = 0;
+            this.tcno.Text = "Tc No";
+            this.tcno.Enter += new System.EventHandler(this.tcno_Enter);
+            this.tcno.Leave += new System.EventHandler(this.tcno_Leave);
+            this.tcno.MouseEnter += new System.EventHandler(this.tcno_MouseEnter);
             // 
             // label1
             // 
@@ -77,11 +82,15 @@ namespace HastaneOtomasyon
             // ad
             // 
             this.ad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ad.ForeColor = System.Drawing.Color.Silver;
             this.ad.Location = new System.Drawing.Point(124, 93);
             this.ad.MaxLength = 20;
             this.ad.Name = "ad";
             this.ad.Size = new System.Drawing.Size(156, 23);
             this.ad.TabIndex = 2;
+            this.ad.Text = "Ad";
+            this.ad.Enter += new System.EventHandler(this.ad_Enter);
+            this.ad.Leave += new System.EventHandler(this.ad_Leave);
             // 
             // label3
             // 
@@ -96,11 +105,15 @@ namespace HastaneOtomasyon
             // soyad
             // 
             this.soyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.soyad.ForeColor = System.Drawing.Color.Silver;
             this.soyad.Location = new System.Drawing.Point(124, 141);
             this.soyad.MaxLength = 20;
             this.soyad.Name = "soyad";
             this.soyad.Size = new System.Drawing.Size(156, 23);
             this.soyad.TabIndex = 4;
+            this.soyad.Text = "Soyad";
+            this.soyad.Enter += new System.EventHandler(this.soyad_Enter);
+            this.soyad.Leave += new System.EventHandler(this.soyad_Leave);
             // 
             // label4
             // 
@@ -115,12 +128,16 @@ namespace HastaneOtomasyon
             // sifre
             // 
             this.sifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sifre.ForeColor = System.Drawing.Color.Silver;
             this.sifre.Location = new System.Drawing.Point(124, 192);
             this.sifre.MaxLength = 30;
             this.sifre.Name = "sifre";
             this.sifre.Size = new System.Drawing.Size(156, 23);
             this.sifre.TabIndex = 6;
+            this.sifre.Text = "****";
             this.sifre.UseSystemPasswordChar = true;
+            this.sifre.Enter += new System.EventHandler(this.sifre_Enter);
+            this.sifre.Leave += new System.EventHandler(this.sifre_Leave);
             // 
             // Kayit_Button
             // 
@@ -151,12 +168,16 @@ namespace HastaneOtomasyon
             // sifreTekrar
             // 
             this.sifreTekrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.sifreTekrar.ForeColor = System.Drawing.Color.Silver;
             this.sifreTekrar.Location = new System.Drawing.Point(124, 232);
             this.sifreTekrar.MaxLength = 30;
             this.sifreTekrar.Name = "sifreTekrar";
             this.sifreTekrar.Size = new System.Drawing.Size(156, 23);
             this.sifreTekrar.TabIndex = 12;
+            this.sifreTekrar.Text = "****";
             this.sifreTekrar.UseSystemPasswordChar = true;
+            this.sifreTekrar.Enter += new System.EventHandler(this.sifreTekrar_Enter);
+            this.sifreTekrar.Leave += new System.EventHandler(this.sifreTekrar_Leave);
             // 
             // checkBox1
             // 

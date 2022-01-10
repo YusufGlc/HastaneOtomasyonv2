@@ -82,5 +82,9 @@ namespace HastaneOtomasyon
             base.WndProc(ref m);
         }
 
+        private void ReceteSilForm_Load(object sender, EventArgs e)
+        {
+            receteListele();
+        }
     }
 }

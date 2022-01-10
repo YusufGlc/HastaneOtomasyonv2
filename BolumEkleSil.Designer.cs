@@ -187,6 +187,7 @@ namespace HastaneOtomasyon
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BolumEkleSil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BolumEkleSil";
             this.Load += new System.EventHandler(this.BolumEkleSil_Load);
             this.groupBox3.ResumeLayout(false);

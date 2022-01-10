@@ -210,6 +210,7 @@ namespace HastaneOtomasyon
             this.Name = "ReceteSilForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reçete Sil";
+            this.Load += new System.EventHandler(this.ReceteSilForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);

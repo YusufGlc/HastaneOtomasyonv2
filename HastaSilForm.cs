@@ -82,5 +82,9 @@ namespace HastaneOtomasyon
             base.WndProc(ref m);
         }
 
+        private void HastaSilForm_Load(object sender, EventArgs e)
+        {
+            hastaListele();
+        }
     }
 }

@@ -83,5 +83,12 @@ namespace HastaneOtomasyon
             bolumEkleSil.Show();
             this.Hide();
         }
+
+        private void adminEkle_Button_Click(object sender, EventArgs e)
+        {
+            AdminEkleSil adminEkleSil = new AdminEkleSil();
+            adminEkleSil.Show();
+            this.Hide();
+        }
     }
 }
