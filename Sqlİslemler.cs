@@ -12,7 +12,7 @@ namespace HastaneOtomasyon
     class Sqlİslemler
     {
 
-        internal SqlConnection connection = new SqlConnection("Data Source=WIN-IM38HI1GTD6\\SQLEXPRESS;Initial Catalog=HastaneOtomasyonDB;Persist Security Info=True;User ID=sa;Password=qwerT12/;");
+        internal SqlConnection connection = new SqlConnection("Data Source=Exponental-4224;Initial Catalog=HastaneOtomasyonDB;Integrated Security=True");
         
         
         internal void degisiklikYap(string command)

@@ -64,7 +64,7 @@ namespace HastaneOtomasyon
 
         private void AdminGirisYap(string admin_id)
         {
-            AdminForm adminForm = new AdminForm();
+            AdminForm adminForm = new AdminForm(admin_id);
             this.Hide();
             adminForm.Show();
             adminTextBox1.Clear();
@@ -190,5 +190,9 @@ namespace HastaneOtomasyon
             base.WndProc(ref m);
         }
 
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

@@ -37,8 +37,9 @@ namespace HastaneOtomasyon
             this.sil_Button = new System.Windows.Forms.Button();
             this.ekle_Button = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.geriDon_Button = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.geriDon_Button = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -147,6 +148,19 @@ namespace HastaneOtomasyon
             this.label7.TabIndex = 12;
             this.label7.Text = "Bölüm ad";
             // 
+            // exitButton
+            // 
+            this.exitButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.close;
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Location = new System.Drawing.Point(797, 12);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(42, 33);
+            this.exitButton.TabIndex = 34;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // geriDon_Button
             // 
             this.geriDon_Button.BackColor = System.Drawing.Color.Transparent;
@@ -162,18 +176,18 @@ namespace HastaneOtomasyon
             this.geriDon_Button.UseVisualStyleBackColor = false;
             this.geriDon_Button.Click += new System.EventHandler(this.geriDon_Button_Click);
             // 
-            // exitButton
+            // minimizeButton
             // 
-            this.exitButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.close;
-            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Location = new System.Drawing.Point(797, 12);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(42, 33);
-            this.exitButton.TabIndex = 34;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.minimizeButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.minimize_icon_29;
+            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Location = new System.Drawing.Point(754, 12);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(37, 33);
+            this.minimizeButton.TabIndex = 40;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // BolumEkleSil
             // 
@@ -181,6 +195,7 @@ namespace HastaneOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(864, 562);
+            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.geriDon_Button);
             this.Controls.Add(this.groupBox3);
@@ -210,5 +225,6 @@ namespace HastaneOtomasyon
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button geriDon_Button;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }

@@ -12,12 +12,14 @@ namespace HastaneOtomasyon
 {
     public partial class AdminForm : Form
     {
-        public AdminForm()
+        public AdminForm(string admin_id)
         {
             InitializeComponent();
+            adminİd = admin_id;
         }
 
-        
+        public static string adminİd;
+
         private void CıkısButton_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -89,6 +91,11 @@ namespace HastaneOtomasyon
             AdminEkleSil adminEkleSil = new AdminEkleSil();
             adminEkleSil.Show();
             this.Hide();
+        }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

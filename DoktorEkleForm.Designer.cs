@@ -53,8 +53,9 @@ namespace HastaneOtomasyon
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -343,6 +344,19 @@ namespace HastaneOtomasyon
             this.dataGridView1.Size = new System.Drawing.Size(451, 255);
             this.dataGridView1.TabIndex = 22;
             // 
+            // exitButton
+            // 
+            this.exitButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.close;
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Location = new System.Drawing.Point(1144, 12);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(45, 44);
+            this.exitButton.TabIndex = 33;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Transparent;
@@ -358,18 +372,18 @@ namespace HastaneOtomasyon
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // exitButton
+            // minimizeButton
             // 
-            this.exitButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.close;
-            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Location = new System.Drawing.Point(1144, 12);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(45, 44);
-            this.exitButton.TabIndex = 33;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.minimizeButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.minimize_icon_29;
+            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Location = new System.Drawing.Point(1083, 12);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(46, 44);
+            this.minimizeButton.TabIndex = 41;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // DoktorEkleSilForm
             // 
@@ -377,6 +391,7 @@ namespace HastaneOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1253, 542);
+            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox3);
@@ -424,5 +439,6 @@ namespace HastaneOtomasyon
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.Button bolumAta_button;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }

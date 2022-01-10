@@ -215,5 +215,10 @@ namespace HastaneOtomasyon
                 sifreTekrar.ForeColor = Color.Silver;
             }
         }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

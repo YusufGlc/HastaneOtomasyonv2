@@ -39,8 +39,9 @@ namespace HastaneOtomasyon
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -170,6 +171,19 @@ namespace HastaneOtomasyon
             this.dataGridView1.Size = new System.Drawing.Size(451, 255);
             this.dataGridView1.TabIndex = 22;
             // 
+            // exitButton
+            // 
+            this.exitButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.close;
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Location = new System.Drawing.Point(800, 12);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(42, 33);
+            this.exitButton.TabIndex = 33;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
@@ -185,18 +199,18 @@ namespace HastaneOtomasyon
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.geriDon_Button_Click);
             // 
-            // exitButton
+            // minimizeButton
             // 
-            this.exitButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.close;
-            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.exitButton.FlatAppearance.BorderSize = 0;
-            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitButton.Location = new System.Drawing.Point(800, 12);
-            this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(42, 33);
-            this.exitButton.TabIndex = 33;
-            this.exitButton.UseVisualStyleBackColor = false;
-            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            this.minimizeButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.minimize_icon_29;
+            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Location = new System.Drawing.Point(757, 12);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(37, 33);
+            this.minimizeButton.TabIndex = 47;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
             // 
             // RandevuSilForm
             // 
@@ -204,6 +218,7 @@ namespace HastaneOtomasyon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(875, 549);
+            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.groupBox3);
@@ -235,5 +250,6 @@ namespace HastaneOtomasyon
         private System.Windows.Forms.TextBox txt_randevuNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }

@@ -30,6 +30,7 @@ namespace HastaneOtomasyon
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.silButton = new System.Windows.Forms.Button();
             this.txt_sifre = new System.Windows.Forms.TextBox();
             this.txt_kullaniciAd = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -38,6 +39,9 @@ namespace HastaneOtomasyon
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.listele_Button = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.exitButton = new System.Windows.Forms.Button();
+            this.geriDon_Button = new System.Windows.Forms.Button();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -45,6 +49,7 @@ namespace HastaneOtomasyon
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.silButton);
             this.groupBox1.Controls.Add(this.txt_sifre);
             this.groupBox1.Controls.Add(this.txt_kullaniciAd);
             this.groupBox1.Controls.Add(this.button2);
@@ -56,10 +61,27 @@ namespace HastaneOtomasyon
             this.groupBox1.Size = new System.Drawing.Size(322, 380);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Doktor ekle";
+            this.groupBox1.Text = "Admin Ekle / Sil";
+            // 
+            // silButton
+            // 
+            this.silButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.silButton.FlatAppearance.BorderSize = 0;
+            this.silButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SeaGreen;
+            this.silButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.silButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.silButton.Location = new System.Drawing.Point(43, 326);
+            this.silButton.Name = "silButton";
+            this.silButton.Size = new System.Drawing.Size(247, 36);
+            this.silButton.TabIndex = 35;
+            this.silButton.Text = "Sil";
+            this.silButton.UseVisualStyleBackColor = false;
+            this.silButton.Click += new System.EventHandler(this.silButton_Click);
             // 
             // txt_sifre
             // 
+            this.txt_sifre.AccessibleDescription = "";
+            this.txt_sifre.AccessibleName = "";
             this.txt_sifre.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_sifre.Location = new System.Drawing.Point(120, 192);
             this.txt_sifre.MaxLength = 30;
@@ -87,7 +109,7 @@ namespace HastaneOtomasyon
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(247, 36);
             this.button2.TabIndex = 28;
-            this.button2.Text = "Admin Ekle";
+            this.button2.Text = "Ekle";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -136,6 +158,7 @@ namespace HastaneOtomasyon
             this.listele_Button.TabIndex = 29;
             this.listele_Button.Text = "Listele";
             this.listele_Button.UseVisualStyleBackColor = false;
+            this.listele_Button.Click += new System.EventHandler(this.listele_Button_Click);
             // 
             // dataGridView1
             // 
@@ -150,12 +173,56 @@ namespace HastaneOtomasyon
             this.dataGridView1.Size = new System.Drawing.Size(408, 255);
             this.dataGridView1.TabIndex = 22;
             // 
+            // exitButton
+            // 
+            this.exitButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.close;
+            this.exitButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.exitButton.FlatAppearance.BorderSize = 0;
+            this.exitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitButton.Location = new System.Drawing.Point(802, 5);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(42, 33);
+            this.exitButton.TabIndex = 37;
+            this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // geriDon_Button
+            // 
+            this.geriDon_Button.BackColor = System.Drawing.Color.Transparent;
+            this.geriDon_Button.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.geri_don;
+            this.geriDon_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.geriDon_Button.FlatAppearance.BorderSize = 0;
+            this.geriDon_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.geriDon_Button.ForeColor = System.Drawing.Color.Transparent;
+            this.geriDon_Button.Location = new System.Drawing.Point(23, 441);
+            this.geriDon_Button.Name = "geriDon_Button";
+            this.geriDon_Button.Size = new System.Drawing.Size(76, 55);
+            this.geriDon_Button.TabIndex = 36;
+            this.geriDon_Button.UseVisualStyleBackColor = false;
+            this.geriDon_Button.Click += new System.EventHandler(this.geriDon_Button_Click);
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.minimize_icon_29;
+            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Location = new System.Drawing.Point(759, 5);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(37, 33);
+            this.minimizeButton.TabIndex = 38;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
             // AdminEkleSil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(895, 508);
+            this.ClientSize = new System.Drawing.Size(856, 508);
+            this.Controls.Add(this.minimizeButton);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.geriDon_Button);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -163,6 +230,7 @@ namespace HastaneOtomasyon
             this.Name = "AdminEkleSil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Ekle / Sil";
+            this.Load += new System.EventHandler(this.AdminEkleSil_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -182,5 +250,9 @@ namespace HastaneOtomasyon
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button listele_Button;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button geriDon_Button;
+        private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button minimizeButton;
+        private System.Windows.Forms.Button silButton;
     }
 }

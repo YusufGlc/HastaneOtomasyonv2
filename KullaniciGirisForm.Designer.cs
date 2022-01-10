@@ -52,6 +52,7 @@ namespace HastaneOtomasyon
             this.label6 = new System.Windows.Forms.Label();
             this.adminTextBox2 = new System.Windows.Forms.TextBox();
             this.adminTextBox1 = new System.Windows.Forms.TextBox();
+            this.minimizeButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.hastaGiris.SuspendLayout();
@@ -332,6 +333,19 @@ namespace HastaneOtomasyon
             this.adminTextBox1.Size = new System.Drawing.Size(196, 23);
             this.adminTextBox1.TabIndex = 10;
             // 
+            // minimizeButton
+            // 
+            this.minimizeButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.minimize_icon_29;
+            this.minimizeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.minimizeButton.Location = new System.Drawing.Point(497, 5);
+            this.minimizeButton.Name = "minimizeButton";
+            this.minimizeButton.Size = new System.Drawing.Size(37, 33);
+            this.minimizeButton.TabIndex = 2;
+            this.minimizeButton.UseVisualStyleBackColor = false;
+            this.minimizeButton.Click += new System.EventHandler(this.minimizeButton_Click);
+            // 
             // exitButton
             // 
             this.exitButton.BackgroundImage = global::HastaneOtomasyon.Properties.Resources.close;
@@ -350,6 +364,7 @@ namespace HastaneOtomasyon
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 477);
+            this.Controls.Add(this.minimizeButton);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -395,6 +410,7 @@ namespace HastaneOtomasyon
         private System.Windows.Forms.CheckBox check_doktorSifre;
         private System.Windows.Forms.CheckBox check_adminSifre;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.Button minimizeButton;
     }
 }
 
